@@ -61,8 +61,6 @@ jobs:
           platforms: ${{ matrix.os.platform }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha,scope=${{ matrix.os.platform }}
-          cache-to: type=gha,mode=max,scope=${{ matrix.os.platform }}
           provenance: false
           sbom: false
 
