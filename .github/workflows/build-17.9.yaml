@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     tags:
-      - v17.5-system-*
+      - v17.9-system-*
 
 env:
   REGISTRY: ghcr.io
@@ -55,7 +55,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
-          file: 17.5-system.Dockerfile
+          file: 17.9-system.Dockerfile
           push: true
           platforms: ${{ matrix.os.platform }}
           tags: ${{ steps.meta.outputs.tags }}
